@@ -8,7 +8,7 @@ import rest.test.example.server.AccessoriesServer;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "src/it/resources", strict = true, glue = "rest.test.stepdefs", tags = {
-		"@AccessoriesInventory" }, plugin = { "pretty", "html:target/failsafe-reports-description" })
+		"@AccessoriesInventory" }, plugin = { "pretty", "json:target/cucumber.json" })
 public class CucumberFeaturesAccessoriesIT {
 	public static void main(String[] args) throws Exception {
 		new AccessoriesServer(9988).start();
