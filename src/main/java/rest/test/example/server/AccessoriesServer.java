@@ -58,6 +58,5 @@ public class AccessoriesServer {
 			System.out.println("There was an error stopping Skills Server. " + e.getMessage());
 			e.printStackTrace();
 		}
-		System.out.println("Server shutdown");
 	}
 }

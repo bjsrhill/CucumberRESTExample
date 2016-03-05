@@ -77,7 +77,6 @@ public class AccessoriesService {
 		};
 		final Type type = typeToken.getType();
 		final Gson gson = new Gson();
-
 		return gson.fromJson(accessoriesValue, type);
 	}
 }
