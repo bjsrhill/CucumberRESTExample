@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.file.FileSystems;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.Properties;
 
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
@@ -19,6 +20,7 @@ public class AccessoriesHooks {
 
 	public static final int PORT = 8887;
 	private AccessoriesServer skillsServer = new AccessoriesServer(PORT);
+	private Properties p = new Properties(System.getProperties());
 
 	@Before(order = 1)
 	public void deleteDataFile() {
@@ -32,11 +34,15 @@ public class AccessoriesHooks {
 
 	@Before(order = 2)
 	public void startSkillsServer() {
-		skillsServer.start();
+		if(p.getProperty("useServer").equals("true")) {
+			skillsServer.start();
+		}
 	}
 
 	@After(order = 1)
 	public void stopSkillsServer() {
-		skillsServer.stop();
+		if(p.getProperty("useServer").equals("true")) {
+			skillsServer.stop();
+		}
 	}
 }

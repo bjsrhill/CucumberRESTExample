@@ -16,10 +16,10 @@ Feature: Get an inventory of accessories for computers category
 	Then a JSON resonse is returned
 	"""
 	[
-		{"accessories":"Mouse","category":"computers"},
-		{"accessories":"Mousepad","category":"computers"},
-		{"accessories":"Keyboard","category":"computers"},
-		{"accessories":"Cable","category":"computers"},
-		{"accessories":"Monitor","category":"computers"}
+		{'accessories':'Mouse','category':'computers'},
+		{'accessories':'Mousepad','category':'computers'},
+		{'accessories':'Keyboard','category':'computers'},
+		{'accessories':'Cable','category':'computers'},
+		{'accessories':'Monitor','category':'computers'}
 	]
 	"""
