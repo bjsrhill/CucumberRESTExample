@@ -62,7 +62,7 @@
        <dependency>
 		<groupId>net.masterthought</groupId>
 		<artifactId>cucumber-reporting</artifactId>
-		<version>1.4.0</version>
+		<version>3.20.0</version>
 	</dependency>
 	<dependency>
 	    <groupId>com.github.tomakehurst</groupId>
@@ -100,7 +100,7 @@
         	<plugin>
                 <groupId>net.masterthought</groupId>
                 <artifactId>maven-cucumber-reporting</artifactId>
-                <version>0.0.5</version>
+                <version>3.20.0</version>
                 <executions>
                     <execution>
                         <id>execution</id>
