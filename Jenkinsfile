@@ -56,7 +56,7 @@ pipeline {
             }
           }
           container('maven') {
-            sh 'mvn clean deploy'
+            sh 'mvn clean install deploy'
 
             sh 'export VERSION=`cat VERSION` && skaffold build -f skaffold.yaml'
 
@@ -86,6 +86,7 @@ pipeline {
     }
     post {
         always {
+	    cucumber fileIncludePattern: '**/*.json', sortingMethod: 'ALPHABETICAL'
             cleanWs()
         }
         failure {
