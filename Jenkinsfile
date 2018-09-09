@@ -86,6 +86,7 @@ pipeline {
     }
     post {
         always {
+	    cucumber fileIncludePattern: '**/*.json', sortingMethod: 'ALPHABETICAL'
             cleanWs()
         }
         failure {
